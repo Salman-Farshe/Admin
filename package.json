@@ -1,0 +1,25 @@
+{
+  "name": "project-104-admin-ui",
+  "version": "1.0.0",
+  "description": "A bootstrap project on Admin UI",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salman-Farshe/Admin.git"
+  },
+  "author": "Salman Farshe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Salman-Farshe/Admin/issues"
+  },
+  "homepage": "https://github.com/Salman-Farshe/Admin#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^5.0.0-beta3",
+    "jquery": "^3.6.0",
+    "node-sass": "^5.0.0"
+  }
+}
