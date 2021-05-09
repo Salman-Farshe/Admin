@@ -367,6 +367,21 @@
 
 
 
+    <!-- footer section -->
+    <footer class="footer py-5 bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="text-center m-auto">
+                        Copyright &copy; <span id="year"></span> All Right Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
     <!-- fontawesome webfont -->
     <script src="https://kit.fontawesome.com/70401da5f8.js" crossorigin="anonymous"></script>
     <!-- fontawesome SVG -->
@@ -390,6 +405,10 @@
                 .catch( error => {
                         console.error( error );
                 } );
+
+        
+        // footer section
+        $('#year').text(new Date().getFullYear());
 </script>
 </body>
 </html>
