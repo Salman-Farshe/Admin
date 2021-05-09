@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- css -->
@@ -95,6 +95,146 @@
 
 
 
+    <!-- Action Section Buttons/Modals/Forms -->
+    <section class="action py-5 mb-2 bg-light">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-3 mb-3">
+                    <a href="#" class="btn btn-block btn-primary w-75" data-bs-toggle="modal" data-bs-target="#addPostModal">
+                        <i class="fas fa-plus"></i> Add Post
+                    </a>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <a href="#" class="btn btn-block btn-success w-75" data-bs-toggle="modal" data-bs-target="#addCategoryModal">
+                        <i class="fas fa-plus"></i> Add Category
+                    </a>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <a href="#" class="btn btn-block btn-warning w-75" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                        <i class="fas fa-plus"></i> Add User
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Add Post Modal -->
+    <div class="modal fade" id="addPostModal" tabindex="-1" aria-labelledby="addPostModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="addPostModal">Add Post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <!-- title -->
+                        <div class="form-group mb-3">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control w-100 p-1 mt-1">
+                        </div>
+                        <!-- category -->
+                        <div class="form-group mb-3">
+                            <label for="category">Category</label>
+                            <select name="ctg" id="ctg" class="form-control w-100 p-1 mt-1">
+                                <option value="">Web Designer</option>
+                                <option value="">Front-End Web Developer</option>
+                                <option value="">Back-End Web Developer</option>
+                                <option value="">Full Stact Web Developer</option>
+                                <option value="">Cross/Mobile Application Developer</option>
+                            </select>
+                        </div>
+                        <!-- upload image -->
+                        <div class="form-group">
+                            <label for="img" class="w-100">Upload Image</label>
+                            <input type="file" name="img" id="img" class="form-control mt-2">
+                        </div>
+                        <small class="form-text text-muted">Max Size 3 MB</small>
+                        <!-- body -->
+                        <div class="form-group mt-3">
+                            <label for="body">Body</label>
+                            <textarea name="editor" id="editor" class="form-control">
+                                <!-- ck editor cdn -->
+                            </textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Add Category Modal -->
+    <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title" id="addCategoryModal">Add Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group mt-3">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control mt-1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Add User Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" id="addUserModal">Add User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group mt-3">
+                            <label for="title">Name</label>
+                            <input type="text" class="form-control mt-1">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control mt-1">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="pass">Password</label>
+                            <input type="password" class="form-control mt-1">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="pass">Confirm Password</label>
+                            <input type="password" class="form-control mt-1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- fontawesome webfont -->
     <script src="https://kit.fontawesome.com/70401da5f8.js" crossorigin="anonymous"></script>
     <!-- fontawesome SVG -->
@@ -104,6 +244,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <!-- ck editor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
     <!-- main js file -->
+
+    <script>
+        ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+</script>
 </body>
 </html>
